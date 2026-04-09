@@ -43,7 +43,7 @@ git add .
 git commit -m "Initial commit: 智能问答 AI 系统"
 
 # 添加远程仓库（替换为你的 GitHub 用户名）
-git remote add origin https://github.com/DayiSiki/Intelligent-Q-A-AI-System.git
+git remote add origin https://github.com/2781084001/Intelligent-Q-A-AI-System.git
 
 # 推送代码
 git branch -M main
