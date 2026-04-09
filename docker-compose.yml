@@ -1,0 +1,27 @@
+version: '3.8'
+
+services:
+  redis-cluster:
+    image: bitnami/redis-cluster:7.2
+    environment:
+      - REDIS_NODES=redis-cluster redis-cluster2 redis-cluster3
+      - REDIS_CLUSTER_REPLICAS=1
+    ports:
+      - "6379-6384:6379"
+
+  rocketmq:
+    image: apache/rocketmq:5.1.0
+    ports:
+      - "9876:9876"
+      - "10911:10911"
+
+  ollama:
+    image: ollama/ollama:latest
+    ports:
+      - "11434:11434"
+    volumes:
+      - ollama_data:/root/.ollama
+    command: serve
+
+volumes:
+  ollama_data:
