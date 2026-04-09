@@ -30,14 +30,21 @@
 ### 本地运行
 
 ```bash
-# 1. 克隆项目
-git clone https://github.com/你的用户名/shengfangzhi-qa.git
+# 进入你的项目目录（假设项目在本地）
+cd /path/to/your/Intelligent-Q-A-AI-System
 
-# 2. 进入项目目录
-cd shengfangzhi-qa
+# 初始化 Git 仓库
+git init
 
-# 3. 使用 docker-compose 启动依赖服务（Redis、RocketMQ）
-docker-compose up -d
+# 添加所有文件
+git add .
 
-# 4. 启动 Spring Boot 应用
-./mvnw spring-boot:run
+# 首次提交
+git commit -m "Initial commit: 智能问答 AI 系统"
+
+# 添加远程仓库（替换为你的 GitHub 用户名）
+git remote add origin https://github.com/你的用户名/Intelligent-Q-A-AI-System.git
+
+# 推送代码
+git branch -M main
+git push -u origin main
